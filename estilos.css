@@ -1,0 +1,139 @@
+/* DOM */
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+/* contenedores principales */
+
+.contenedor {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin-top: 100px;
+}
+
+.arbol {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px inset black;
+  width: 381px;
+  height: 440px;
+  background-image: url('assets/img/tree.png');
+  background-repeat: no-repeat;
+}
+
+.fondo {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px inset yellow;
+  width: 381px;
+  height: 100px;
+  z-index: 11;
+  position: relative;
+}
+
+.datos {
+  margin-top: 0px;
+  padding-left: -5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bolas-contenedor {
+  width: 381px;
+  height: 30px;
+  position: relative;
+  margin: 10px auto 0 auto;
+}
+
+.botones-contenedor {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 381px;
+  height: 80px;
+}
+
+/* botones */
+
+.boton {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.boton:active {
+  position: relative;
+  top: 1px;
+}
+
+.boton-adorno {
+  box-shadow: inset 0px 1px 0px 0px #97c4fe;
+  background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+  background-color: #3d94f6;
+  border: 1px solid #337fed;
+  text-shadow: 0px 1px 0px #1570cd;
+}
+
+.boton-adorno:hover {
+  background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  background-color: #1e62d0;
+}
+
+
+.boton-sacudir {
+  float: right;
+  box-shadow: inset 0px 1px 0px 0px #e184f3;
+  background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+  background-color: #c123de;
+  border: 1px solid #a511c0;
+  text-shadow: 0px 1px 0px #9b14b3;
+}
+
+.boton-sacudir:hover {
+  background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+  background-color: #a20dbd;
+}
+
+/* animaciones CSS */
+
+.menear-arbol {
+  animation: menear 0.99s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 800px;
+}
+
+@keyframes menear {
+
+  10%,
+  90% {
+    transform: translate3d(-9px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(8px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
